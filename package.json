@@ -1,28 +1,29 @@
 {
-  "name": "sandbox-webpack",
+  "name": "sandbox-web-workers",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server",
-    "build:dev": "webpack --mode development",
-    "build:prod": "webpack --mode production"
+  "description": "Web Workersのsandbox",
+  "keywords": [],
+  "homepage": "https://github.com/tyankatsu0105/sandbox-web-workers#readme",
+  "bugs": {
+    "url": "https://github.com/tyankatsu0105/sandbox-web-workers/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tyankatsu0105/sandbox-webpack.git"
+    "url": "git+https://github.com/tyankatsu0105/sandbox-web-workers.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tyankatsu0105/sandbox-webpack/issues"
+  "author": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production",
+    "start": "webpack-dev-server"
   },
-  "homepage": "https://github.com/tyankatsu0105/sandbox-webpack#readme",
+  "dependencies": {},
   "devDependencies": {
     "@types/webpack": "^4.41.0",
-    "webpack": "^4.41.2",
+    "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.0"
+    "webpack-dev-server": "^3.10.1"
   }
 }
