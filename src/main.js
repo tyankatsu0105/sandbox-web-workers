@@ -1,20 +1,18 @@
 'use strict';
 
-// console.log('start');
-// const ary = [];
-// for (let index = 0; index < 10000000; index++) {
-//   ary.push(index)
-// }
-
-// const result = ary.reduce((acc, item) => acc += item, 0);
-// console.log(result);
-// console.log('finish');
-
 console.log('start');
+
+const data = [];
+for (let index = 0; index < 1000000; index++) {
+  data.push(index)
+}
 
 console.log('finish');
 const worker = new Worker('worker.js');
+worker.postMessage({data});
+
 worker.onmessage = function onMessage(e) {
-  console.log('[MAIN]', e.data);
+  const { result } = e.data;
+  
+  console.log('[MAIN]', result);
 };
-worker.postMessage('');
